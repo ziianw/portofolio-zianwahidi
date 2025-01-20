@@ -2674,8 +2674,9 @@ text-align: center;
 }
 
 .more-icon:hover {
-  background-color: #2d634a;
-  color: #00ae11;
+  background-color: #fff;
+  color: #221d5c;
+  box-shadow: var(--shadow-7);
 }
 
 /* Responsive Styles for screens <= 767px */
@@ -2711,7 +2712,7 @@ text-align: center;
 
   .schedule-details {
     font-size: 14px; /* Ukuran teks lebih besar */
-    display: flex; /* Tetap rapi */
+    /* display: flex; Tetap rapi */
     flex-wrap: wrap; /* Membungkus jika teks panjang */
     justify-content: center; /* Menyelaraskan item ke tengah */
   }
@@ -2732,7 +2733,7 @@ text-align: center;
     transform: translateY(-50%);
     font-size: 24px;
     color: #ffffff;
-    background-color: #36795a;
+    background-color: #221d5c;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -2740,5 +2741,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    position: static;
+    margin-top: 25px;
   }
 }
