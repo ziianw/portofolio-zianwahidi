@@ -5,7 +5,7 @@
 :root {
   --font-family: "Inter", sans-serif;
   --primary: #009038;
-  --primary-dark: #11a149;
+  --primary-dark: #343063;
   --primary-light: #e2f1ff;
   --accent: #00d4d7;
   --accent-dark: #00bac1;
@@ -52,19 +52,24 @@
     0px 2px 4px rgba(96, 97, 112, 0.16);
   --shadow-3: 0px 0px 2px rgba(40, 41, 61, 0.04),
     0px 4px 8px rgba(96, 97, 112, 0.16);
-  --shadow-4: 0px 2px 4px rgba(40, 41, 61, 0.04),
-    0px 8px 16px rgba(96, 97, 112, 0.16);
+    --shadow-4: 0px 2px 4px rgba(0, 144, 56, 0.2), 
+    0px 8px 16px rgba(0, 144, 56, 0.5);
   --shadow-5: 0px 2px 8px rgba(40, 41, 61, 0.04),
     0px 16px 24px rgba(96, 97, 112, 0.16);
   --shadow-6: 0px 2px 8px rgba(40, 41, 61, 0.08),
     0px 20px 32px rgba(96, 97, 112, 0.24);
+    --shadow-7: 0px 2px 4px rgba(34, 29, 92, 0.2), 
+            0px 8px 16px rgba(34, 29, 92, 0.5);
+
 }
 
 body {
   font-family: var(--font-family);
   color: var(--black);
   font-size: 16px;
+  overflow-x: hidden !important;
 }
+
 @media (max-width: 991px) {
   body {
     font-size: 14px;
@@ -104,7 +109,7 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  color: var(--black);
+  color: #221d5c;
   margin: 0px;
 }
 
@@ -257,14 +262,14 @@ p {
 
 /* ===== Buttons Css ===== */
 .primary-btn {
-  background: #009038;
+  background: #221d5c;
   color: var(--white);
   box-shadow: var(--shadow-2);
 }
 .active.primary-btn, .primary-btn:hover, .primary-btn:focus {
   background: var(--primary-dark);
   color: var(--white);
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-7);
 }
 .deactive.primary-btn {
   background: var(--gray-4);
@@ -273,8 +278,8 @@ p {
 }
 
 .primary-btn-outline {
-  border-color: #009038;
-  color: #009038;
+  border-color: #221d5c;
+  color: #221d5c;
 }
 .active.primary-btn-outline, .primary-btn-outline:hover, .primary-btn-outline:focus {
   background: var(--primary-dark);
@@ -348,8 +353,8 @@ p {
   font-weight: 600;
   display: inline-block;
   margin-bottom: 15px;
-  color: #009038;
-  border: 2px solid #009038;
+  color: #221d5c;
+  border: 2px solid #221d5c;
   border-radius: 30px;
   padding: 8px 30px;
 }
@@ -501,9 +506,23 @@ p {
   margin: 14px 0;
   opacity: 0.7;
 }
-.navbar-area.navbar-nine .navbar .navbar-nav .nav-item a:hover {
+.navbar-area.navbar-nine .navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item a:hover {
   opacity: 1;
+  margin-left: 5px;
 }
+
+.dropdown-menu .dropdown-item {
+  padding: 10px 20px; /* Default padding */
+  transition: all 0.3s ease; /* Transisi halus */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  text-align: center; /* Teks berada di tengah secara horizontal */
+  background-color: #016828; /* Ubah warna latar belakang */
+  color: white; /* Ubah warna teks */
+  transform: translateY(0); /* Pastikan posisi tetap stabil */
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-area.navbar-nine .navbar .navbar-nav .nav-item a {
     padding: 10px 0;
@@ -687,9 +706,9 @@ p {
     color: #009038;
   }
 }
-.navbar-area.navbar-nine .navbar .navbar-nav .nav-item .sub-menu li:hover > a::after {
+/* .navbar-area.navbar-nine .navbar .navbar-nav .nav-item .sub-menu li:hover > a::after {
   opacity: 1;
-}
+} */
 .navbar-area.navbar-nine .navbar .navbar-nav .nav-item .sub-menu li:hover > a::before {
   opacity: 1;
 }
@@ -750,6 +769,32 @@ p {
   color: #009038;
   background-color: var(--white);
 }
+
+.nav-item .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 144, 56, 0.9); /* Reduced opacity */
+  padding: 10px 50px 5px 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-item {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+.dropdown-item:hover {
+  background-color: #007030;
+  margin-left: 5px !important;
+}
+
 
 /*===== SIDEBAR ONE =====*/
 .sidebar-left {
@@ -941,7 +986,7 @@ p {
 }
 .header-eight .header-content h1 {
   font-weight: 700;
-  color: var(--white);
+  color: #fff;
   text-shadow: 0px 3px 8px #00000017;
   text-transform: capitalize;
 }
@@ -962,20 +1007,20 @@ p {
 }
 .header-eight .header-content p {
   margin-top: 30px;
-  color: var(--white);
-  opacity: 0.7;
+  color: #fff;
+  /* opacity: 0.7; */
 }
 .header-eight .button {
   margin-top: 40px;
 }
 .header-eight .primary-btn {
   margin-right: 12px;
-  background-color: var(--white);
-  color: #009038;
+  background-color: #221d5c;
+  color: #fff;
   border: 1px solid transparent;
 }
 .header-eight .primary-btn:hover {
-  background-color: transparent;
+  background-color: #221d5c;
   color: var(--white);
   border-color: var(--white);
 }
@@ -995,8 +1040,8 @@ p {
   font-weight: 600;
 }
 .header-eight .video-button .icon-btn {
-  background: var(--white);
-  color: #009038;
+  background: #221d5c;
+  color: #fff;
 }
 
 /*===========================
@@ -1041,7 +1086,7 @@ p {
   content: "";
   left: 0;
   top: 50%;
-  background-color: #009038;
+  background-color: #221d5c;
   height: 2px;
   width: 20px;
   margin-top: -1px;
@@ -1085,12 +1130,18 @@ p {
   }
 }
 .about-five-content .about-five-tab nav button:hover {
-  color: #009038;
+  color: #221d5c;
 }
 .about-five-content .about-five-tab nav button.active {
-  background-color: #009038;
+  background-color: #221d5c;
   color: var(--white);
 }
+
+.tab-content > .active {
+display: block;
+text-align: center;
+}
+
 .about-five-content .about-five-tab nav button:last-child {
   margin-right: 0;
   /* margin-top: 20px; */
@@ -1179,12 +1230,12 @@ p {
   transition: all 0.3s ease-out 0s;
 }
 .services-eight .single-services:hover {
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-7);
 }
 .services-eight .single-services:hover .service-icon {
   color: var(--white);
   border-color: transparent;
-  background: #009038;
+  background: #221d5c;
 }
 .services-eight .single-services:hover .service-icon::after {
   opacity: 1;
@@ -1196,11 +1247,11 @@ p {
   border-radius: 50%;
   margin-bottom: 25px;
   background: var(--white);
-  border: 2px solid #009038;
+  border: 2px solid #221d5c;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #009038;
+  color: #221d5c;
   font-size: 40px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -1218,7 +1269,7 @@ p {
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  background: #009038;
+  background: #221d5c;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -1282,7 +1333,7 @@ p {
   line-height: 88px;
   text-align: center;
   border-radius: 50%;
-  background-color: #009038;
+  background-color: #221d5c;
   color: var(--white);
   font-size: 30px;
   position: absolute;
@@ -1310,7 +1361,7 @@ p {
 }
 .video-one .video-content a:hover {
   background-color: var(--white);
-  color: #009038;
+  color: #221d5c;
 }
 
 
@@ -1340,22 +1391,22 @@ p {
   z-index: 0;
 }
 .pricing-style-fourteen:hover {
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-7);
 }
 .pricing-style-fourteen.middle {
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-7);
 }
 .pricing-style-fourteen.middle .title {
-  border-color: #009038;
-  background: #009038;
+  border-color: #221d5c;
+  background: #221d5c;
   color: var(--white);
 }
 .pricing-style-fourteen .title {
   font-weight: 500;
   margin-bottom: 25px;
-  color: #009038;
+  color: #221d5c;
   padding: 8px 20px;
-  border: 2px solid #009038;
+  border: 2px solid #221d5c;
   display: inline-block;
   border-radius: 30px;
   font-size: 16px;
@@ -1543,7 +1594,7 @@ p {
   transition: all 0.3s ease-out 0s;
 }
 .latest-news-area .single-news .content-body .title a:hover {
-  color: #009038;
+  color: #221d5c;
 }
 .latest-news-area .single-news .content-body p {
   color: var(--dark-3);
@@ -1610,7 +1661,7 @@ p {
   box-shadow: var(--shadow-2);
 }
 .contact-form-wrapper .contact-form .active.primary-btn, .contact-form-wrapper .contact-form .primary-btn:hover, .contact-form-wrapper .contact-form .primary-btn:focus {
-  background: var(--primary-dark);
+  background: #009038;
   color: var(--white);
   box-shadow: var(--shadow-4);
 }
@@ -1939,9 +1990,8 @@ p {
   font-weight: 600;
   display: inline-block;
   margin-bottom: 15px;
-  margin-top: 50px;
-  color: #009038;
-  border: 2px solid #009038;
+  color: #221d5c;
+  border: 2px solid #221d5c;
   border-radius: 30px;
   padding: 8px 30px;
 }
@@ -2020,7 +2070,7 @@ p {
   line-height: 88px;
   text-align: center;
   border-radius: 50%;
-  background-color: #009038;
+  background-color: #221d5c;
   color: var(--white);
   font-size: 30px;
   position: absolute;
@@ -2048,7 +2098,7 @@ p {
 }
 .video-one .video-content a:hover {
   background-color: var(--white);
-  color: #009038;
+  color: #221d5c;
 }
 
 .navbar-collapse {
@@ -2092,5 +2142,603 @@ p {
     margin: 0 auto; /* Pusatkan secara horizontal */
     display: block; /* Pastikan logo menjadi elemen block untuk pusat */
     justify-content: center;
+  }
+}
+
+.button-container {
+  display: flex;                /* Menggunakan Flexbox */
+  flex-wrap: wrap;              /* Membungkus tombol ke baris berikutnya jika perlu */
+  justify-content: center;      /* Menjajarkan tombol di tengah */
+  gap: 10px;                    /* Memberikan jarak antar tombol */
+  margin-top: 25px;
+}
+
+.wrapper{
+  margin: 100px auto;
+  max-width: 1100px;
+}
+/* Wrapper */
+.wrapper nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Default gap untuk desktop */
+  margin-top: -60px;
+}
+
+/* Items dalam Navbar */
+.wrapper nav .items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Jarak antar item */
+  justify-content: center;
+}
+
+.wrapper nav .items span {
+  padding: 10px 20px; /* Default ukuran untuk desktop */
+  font-size: 18px; /* Default ukuran font */
+  font-weight: 500;
+  cursor: pointer;
+  color: #221d5c;
+  border-radius: 50px;
+  border: 2px solid #221d5c;
+  transition: all 0.3s ease;
+}
+
+.wrapper nav .items span.active,
+.wrapper nav .items span:hover {
+  color: #fff;
+  background: #221d5c;
+}
+
+/* Responsif */
+@media (max-width: 1000px) {
+  .wrapper nav {
+    gap: 15px; /* Lebih kecil pada tablet */
+  }
+  .wrapper nav .items span {
+    padding: 8px 18px; /* Ukuran lebih kecil */
+    font-size: 16px; /* Font lebih kecil */
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper nav {
+    flex-direction: column; /* Navbar menjadi vertikal */
+    align-items: center;
+    gap: 10px; /* Lebih kecil pada ponsel */
+  }
+  .wrapper nav .items span {
+    padding: 6px 16px; /* Ukuran paling kecil */
+    font-size: 14px; /* Font paling kecil */
+  }
+}
+
+.wrapper .items{
+  display: flex;
+  max-width: 720px;
+  width: 100%;
+  justify-content: space-between;
+}
+.items span{
+  padding: 7px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #009038;
+  border-radius: 50px;
+  border: 2px solid #009038;
+  transition: all 0.3s ease;
+}
+.items span.active,
+.items span:hover{
+  color: #fff;
+  background: #009038;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.gallery .image{
+  width: calc(100% / 4);
+  padding: 7px;
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon{
+  color: #007bff;
+  font-style: 22px;
+  cursor: pointer;
+}
+.preview-box .image-box{
+  width: 100%;
+  display: flex;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+.shadow.show{
+  display: block;
+}
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .wrapper nav .items{
+    max-width: 600px;
+  }
+  nav .items span{
+    padding: 7px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    margin: 30px auto;
+  }
+  .wrapper nav .items{
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px
+  }
+  nav .items span{
+    margin: 5px;
+  }
+  .gallery .image{
+    width: 100%;
+  }
+}
+
+/* Video Item Styling */
+.video-item {
+  position: relative;
+}
+
+.video-item .video-content {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.video-item:hover img {
+  transform: scale(1.1);
+}
+
+.video-item .video-content a {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #221d5c;
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.video-item .video-content a:hover {
+  background-color: #fff;
+  color: #221d5c;
+}
+
+/* Menyamakan ukuran gambar dan video */
+.gallery .image,
+.gallery .video-item {
+  width: calc(100% / 3); /* Ukuran default untuk desktop */
+  height: 400px; /* Tinggi konsisten untuk semua elemen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery .image span,
+.gallery .video-item .video-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery .image img,
+.gallery .video-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Menjaga proporsi gambar tanpa meregang */
+  transition: all 0.3s ease;
+}
+
+.video-item .video-content a {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .gallery .image,
+  .gallery .video-item {
+    width: calc(100% / 3); /* Ukuran untuk tablet */
+    height: 320px; /* Tinggi yang lebih kecil untuk tablet */
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery .image,
+  .gallery .video-item {
+    width: calc(100% / 2); /* Ukuran untuk perangkat kecil */
+    height: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery .image,
+  .gallery .video-item {
+    width: 100%; /* Ukuran untuk perangkat sangat kecil */
+    height: 470px;
+  }
+}
+
+.header-other {
+  position: relative;
+  padding:160px 0 100px 0;
+  background: #009038;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-other {
+    padding: 130px 0 80px 0;
+  }
+}
+@media (max-width: 767px) {
+  .header-other {
+    padding: 100px 0 60px 0;
+  }
+}
+.header-other .header-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .header-other .header-image {
+    margin-top: 40px;
+  }
+}
+.header-other .header-content {
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+.header-other .header-content h1 {
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: 0px 3px 8px #00000017;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-other .header-content h1  {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .header-other .header-content h1  {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+.header-other .header-content h1 span {
+  display: block;
+}
+.header-other .header-content p {
+  margin-top: 30px;
+  color: var(--white);
+  opacity: 0.7;
+}
+.header-other .button {
+  margin-top: 40px;
+}
+.header-other .primary-btn {
+  margin-right: 12px;
+  background-color: var(--white);
+  color: #009038;
+  border: 1px solid transparent;
+}
+.header-other .primary-btn:hover {
+  background-color: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+.header-other .video-button {
+  display: inline-flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .header-other .video-button {
+    margin-top: 20px;
+  }
+}
+.header-other .video-button .text {
+  display: inline-block;
+  margin-left: 15px;
+  color: var(--white);
+  font-weight: 600;
+}
+.header-other .video-button .icon-btn {
+  background: var(--white);
+  color: #009038;
+}
+
+.header-other .primary-btn {
+  background: #ffffff;
+  color: #009038;
+  box-shadow: var(--shadow-2);
+}
+.header-other .active.primary-btn, .header-other .primary-btn:hover, .header-other .primary-btn:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+  box-shadow: var(--shadow-4);
+}
+.header-eight .deactive.primary-btn {
+  background: var(--gray-4);
+  color: var(--dark-3);
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .row.align-items-center {
+    justify-content: center; /* Pastikan elemen rata tengah */
+    text-align: center; /* Teks di tengah */
+  }
+
+  .col-md-9 p {
+    margin-top: 1rem;
+  }
+}
+
+.schedule-section {
+  padding: 50px 0;
+}
+
+.schedule-title {
+  color: #36795a;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.schedule-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.schedule-item {
+  background-color: #49ba83;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.schedule-image {
+  border-radius: 15px;
+}
+
+.schedule-content {
+  position: relative;
+  padding-left: 15px;
+}
+
+.schedule-content h4 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.schedule-content .category {
+  display: inline-block;
+  background-color: #221d5c;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.schedule-details {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.schedule-details li {
+  font-size: 16px;
+  color: #fff;
+}
+
+.schedule-details li span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.more-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #221d5c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.more-icon:hover {
+  background-color: #2d634a;
+  color: #00ae11;
+}
+
+/* Responsive Styles for screens <= 767px */
+@media (max-width: 767px) {
+  .schedule-item {
+    display: flex;
+    flex-direction: column; /* Gambar tetap di atas, konten di bawah */
+    align-items: center; /* Posisikan konten di tengah */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+  }
+
+  .schedule-image {
+    width: 300px; /* Ukuran gambar lebih besar */
+    height: 300px; /* Proporsional dengan lebar */
+    margin-bottom: 15px; /* Jarak antara gambar dan konten */
+    border-radius: 10px; /* Menambahkan sudut membulat */
+    object-fit: cover; /* Pastikan gambar terlihat baik */
+  }
+
+  .schedule-content {
+    flex: 1; /* Konten tetap fleksibel */
+    padding: 10px; /* Menambahkan sedikit padding */
+    display: flex;
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: center; /* Posisikan konten secara horizontal di tengah */
+    justify-content: center; /* Posisikan konten secara vertikal di tengah */
+  }
+
+  h4 {
+    font-size: 18px; /* Ukuran judul sedikit lebih besar */
+    margin: 5px 0;
+  }
+
+  .schedule-details {
+    font-size: 14px; /* Ukuran teks lebih besar */
+    display: flex; /* Tetap rapi */
+    flex-wrap: wrap; /* Membungkus jika teks panjang */
+    justify-content: center; /* Menyelaraskan item ke tengah */
+  }
+
+  .schedule-details li {
+    margin-right: 10px;
+  }
+
+  .category {
+    font-size: 14px; /* Ukuran kategori lebih besar */
+    margin-bottom: 10px;
+  }
+
+  .more-icon {
+    /* position: absolute; */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #36795a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
   }
 }

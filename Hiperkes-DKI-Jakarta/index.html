@@ -36,6 +36,7 @@
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,20 +61,46 @@
             <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="page-scroll active" href="#hero-area">Home</a>
+                  <a class="page-scroll active" href="#hero-area">Beranda</a>
                 </li>
                 <li class="nav-item">
-                  <a class="page-scroll" href="#services">Services</a>
+                  <a class="page-scroll" href="#services">Layanan</a>
                 </li>
-
-                <li class="nav-item">
-                  <a class="page-scroll" href="#pricing">Inovation</a>
+                <li class="nav-item dropdown">
+                  <a class="page-scroll dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Pelatihan
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="#service1" style="margin-left: 15px;">Pelatihan 1</a></li>
+                    <li><a class="dropdown-item" href="#service2" style="margin-left: 15px;">Pelatihan 2</a></li>
+                    <li><a class="dropdown-item" href="#service3" style="margin-left: 15px;">Pelatihan 3</a></li>
+                  </ul>
                 </li>
+                <li class="nav-item dropdown">
+                  <a class="page-scroll dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Pengujian
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="#service1" style="margin-left: 15px;">Pengujian 1</a></li>
+                    <li><a class="dropdown-item" href="#service2" style="margin-left: 15px;">Pengujian 2</a></li>
+                    <li><a class="dropdown-item" href="#service3" style="margin-left: 15px;">Pengujian 3</a></li>
+                  </ul>
+                </li>     
                 <li class="nav-item">
-                  <a class="page-scroll" href="#article">Article</a>
+                  <a class="page-scroll" href="#pricing">Jadwal</a>
+                </li>             
+                <li class="nav-item">
+                  <a class="page-scroll" href="#article">Klien Kami</a>
                 </li>
-                <li class="nav-item">
-                  <a class="page-scroll" href="#contact">Contact</a>
+                <li class="nav-item dropdown">
+                  <a class="page-scroll dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Informasi
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <li><a class="dropdown-item" href="#service1" style="margin-left: 15px;">Artikel</a></li>
+                    <li><a class="dropdown-item" href="#service2" style="margin-left: 15px;">Galeri</a></li>
+                    <li><a class="dropdown-item" href="#service3" style="margin-left: 15px;">Kontak Kami</a></li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -148,13 +175,13 @@
             <h1>Hiperkes DKI Jakarta</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in totam velit quas porro! Fugit exercitationem expedita dolorem magni nam quos, modi tempora dolore, facere accusantium necessitatibus optio? Minus, aliquid?</p>
             <div class="button">
-              <a href="#about" class="btn primary-btn">Read More</a>
+              <a href="#about" class="btn primary-btn">Baca Selengkapnya</a>
               <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
                 class="glightbox video-button">
                 <span class="btn icon-btn rounded-full">
                   <i class="lni lni-play"></i>
                 </span>
-                <span class="text">Watch Intro</span>
+                <span class="text">Video Perkenalan</span>
               </a>
             </div>
           </div>
@@ -266,7 +293,7 @@
         <div class="col-lg-6 col-12">
           <div class="about-five-content" data-aos="fade-left"
           data-aos-duration="2000">
-            <h6 class="small-title text-lg">About Us</h6>
+            <h6 class="small-title text-lg">Tentang Kami</h6>
             <h4 class="main-title fw-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A voluptatibus maiores eum recusandae fugit eaque.</h4>
             <div class="about-five-tab">
               <nav>
@@ -299,7 +326,15 @@
                   </ol>
                 </div>
               </div>
+              
             </div>
+            <div class="button-container">
+              <a href="./landasan-hukum.html" class="btn primary-btn">Dasar Hukum</a>
+              <a href="./tupoksi.html" class="btn primary-btn">Tupoksi</a>
+              <a href="./struktur-organisasi.html" class="btn primary-btn">Struktur Organisasi</a>
+              <a href="./sop-alur-pelayanan.html" class="btn primary-btn">SOP Alur Pelayanan</a>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -307,148 +342,18 @@
     <!-- container -->
   </section>
 
-  <!--====== ABOUT FIVE PART ENDS ======-->
-
-  <!-- ===== service-area start ===== -->
-  <section id="services" class="services-area services-eight">
-    <!--======  Start Section Title Five ======-->
-    <div class="section-title-five">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="content" data-aos="fade-up"
-            data-aos-duration="1000">
-              <h6>Services</h6>
-              <h2 class="fw-bold">Our Best Services</h2>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- row -->
-      </div>
-      <!-- container -->
-    </div>
-    <!--======  End Section Title Five ======-->
-    <div class="container">
-      <div class="row">
-        <!-- Service 1 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services" data-aos="fade-left"
-          data-aos-duration="1500">
-            <div class="service-icon">
-              <i class="lni lni-network"></i> <!-- Ikon yang terkesan corporate -->
-            </div>
-            <div class="service-content">
-              <h4>Service 01</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services" data-aos="fade-left"
-          data-aos-duration="2000">
-            <div class="service-icon">
-              <i class="lni lni-cogs"></i> <!-- Ikon yang lebih formal -->
-            </div>
-            <div class="service-content">
-              <h4>Service 02</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services" data-aos="fade-left"
-          data-aos-duration="2500">
-            <div class="service-icon">
-              <i class="lni lni-layers"></i> <!-- Ikon yang menekankan komponen -->
-            </div>
-            <div class="service-content">
-              <h4>Service 03</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 4 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services" data-aos="fade-right"
-          data-aos-duration="1500">
-            <div class="service-icon">
-              <i class="lni lni-dashboard"></i> <!-- Ikon untuk performa -->
-            </div>
-            <div class="service-content">
-              <h4>Service 04</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 5 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services" data-aos="fade-right"
-          data-aos-duration="2000">
-            <div class="service-icon">
-              <i class="lni lni-crown"></i> <!-- Ikon profesional untuk personalisasi -->
-            </div>
-            <div class="service-content">
-              <h4>Service 05</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 6 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="single-services" data-aos="fade-right"
-          data-aos-duration="2500">
-            <div class="service-icon">
-              <i class="lni lni-reload"></i> <!-- Ikon yang menekankan update reguler -->
-            </div>
-            <div class="service-content">
-              <h4>Service 06</h4>
-              <p>
-                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
-                eirmod tempor ividunt labor dolore magna.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </section>
-  <!-- ===== service-area end ===== -->
-
   <section class="video-area video-one">
     <!--======  Start Section Title Five ======-->
     <div class="section-title-five" data-aos="fade-up"
     data-aos-duration="1000">
-      <div class="container">
+      <div class="container" style="margin-top: -50px;">
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h6>Our Intro Video</h6>
-              <h2 class="fw-bold">Watch Our Introduction Video</h2>
+              <h6>Video Perkenalan</h6>
+              <h3 class="fw-bold">Tonton Video Pengenalan Kami</h3>
               <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex consectetur ullam magni eveniet porro id animi, fugit molestias aliquam non!
               </p>
             </div>
           </div>
@@ -476,6 +381,136 @@
     <!-- container -->
   </section>
 
+  <!--====== ABOUT FIVE PART ENDS ======-->
+
+  <!-- ===== service-area start ===== -->
+  <section id="services" class="services-area services-eight">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content" data-aos="fade-up"
+            data-aos-duration="1000">
+              <h6>Layanan</h6>
+              <h2 class="fw-bold">Layanan Terbaik Kami</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, modi ab optio corporis accusantium dolores!
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+      <div class="row">
+        <!-- Service 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services" data-aos="fade-left"
+          data-aos-duration="1500">
+            <div class="service-icon">
+              <i class="lni lni-network"></i> <!-- Ikon yang terkesan corporate -->
+            </div>
+            <div class="service-content">
+              <h4>Layanan 01</h4>
+              <p>
+                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                eirmod tempor ividunt labor dolore magna.
+              </p>
+              <a href="#about" class="btn primary-btn mt-3" style="  font-size: 14px; line-height: 18px; padding: 10px 20px">Baca Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services" data-aos="fade-left"
+          data-aos-duration="2000">
+            <div class="service-icon">
+              <i class="lni lni-cogs"></i> <!-- Ikon yang lebih formal -->
+            </div>
+            <div class="service-content">
+              <h4>Layanan 02</h4>
+              <p>
+                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                eirmod tempor ividunt labor dolore magna.
+              </p>
+              <a href="#about" class="btn primary-btn mt-3" style="  font-size: 14px; line-height: 18px; padding: 10px 20px">Baca Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services" data-aos="fade-left"
+          data-aos-duration="2500">
+            <div class="service-icon">
+              <i class="lni lni-layers"></i> <!-- Ikon yang menekankan komponen -->
+            </div>
+            <div class="service-content">
+              <h4>Layanan 03</h4>
+              <p>
+                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                eirmod tempor ividunt labor dolore magna.
+              </p>
+              <a href="#about" class="btn primary-btn mt-3" style="  font-size: 14px; line-height: 18px; padding: 10px 20px">Baca Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service 4
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services" data-aos="fade-right"
+          data-aos-duration="1500">
+            <div class="service-icon">
+              <i class="lni lni-dashboard"></i> 
+            </div>
+            <div class="service-content">
+              <h4>Service 04</h4>
+              <p>
+                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                eirmod tempor ividunt labor dolore magna.
+              </p>
+            </div>
+          </div>
+        </div>
+        Service 5
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services" data-aos="fade-right"
+          data-aos-duration="2000">
+            <div class="service-icon">
+              <i class="lni lni-crown"></i> 
+            </div>
+            <div class="service-content">
+              <h4>Service 05</h4>
+              <p>
+                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                eirmod tempor ividunt labor dolore magna.
+              </p>
+            </div>
+          </div>
+        </div>
+        Service 6
+        <div class="col-lg-4 col-md-6">
+          <div class="single-services" data-aos="fade-right"
+          data-aos-duration="2500">
+            <div class="service-icon">
+              <i class="lni lni-reload"></i> 
+            </div>
+            <div class="service-content">
+              <h4>Service 06</h4>
+              <p>
+                Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                eirmod tempor ividunt labor dolore magna.
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    
+  </section>
+  <!-- ===== service-area end ===== -->
 
   <!-- Start Pricing  Area -->
   <section id="pricing" class="pricing-area pricing-fourteen">
@@ -486,8 +521,8 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h6>Inovation</h6>
-              <h2 class="fw-bold">Our Inovation</h2>
+              <h6>Inovasi</h6>
+              <h2 class="fw-bold">Inovasi Terbaik Kami</h2>
               <p>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form.
@@ -506,7 +541,7 @@
           <div class="pricing-style-fourteen" data-aos="fade-right"
           data-aos-duration="1500">
             <div class="table-head">
-              <h6 class="title">Inovation 02</h4>
+              <h6 class="title">Inovasi 02</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
                 <div class="price">
                   <!-- <h2 class="amount">
@@ -517,7 +552,7 @@
 
             <div class="light-rounded-buttons">
               <a href="javascript:void(0)" class="btn primary-btn-outline">
-                Learn More
+                Baca Selengkapnya
               </a>
             </div>
 
@@ -535,7 +570,7 @@
           <div class="pricing-style-fourteen middle" data-aos="fade-up"
           data-aos-duration="1000">
             <div class="table-head">
-              <h6 class="title">Inovation 01</h4>
+              <h6 class="title">Inovasi 01</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
                 <div class="price">
                   <!-- <h2 class="amount">
@@ -546,7 +581,7 @@
 
             <div class="light-rounded-buttons">
               <a href="javascript:void(0)" class="btn primary-btn">
-                Learn More
+                Baca Selengkapnya
               </a>
             </div>
 
@@ -564,7 +599,7 @@
           <div class="pricing-style-fourteen" data-aos="fade-left"
           data-aos-duration="1500">
             <div class="table-head">
-              <h6 class="title">Inovation 03</h4>
+              <h6 class="title">Inovasi 03</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and industry.</p>
                 <div class="price">
                   <!-- <h2 class="amount">
@@ -575,7 +610,7 @@
 
             <div class="light-rounded-buttons">
               <a href="javascript:void(0)" class="btn primary-btn-outline">
-                Learn More
+                Baca Selengkapnya
               </a>
             </div>
 
@@ -594,33 +629,109 @@
   </section>
   <!--/ End Pricing  Area -->
 
-
-
-  <!-- Start Cta Area -->
-  <section id="call-action" class="call-action">
+  <section class="schedule-section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-9">
-          <div class="inner-content">
-            <h2>We love to make perfect <br />solutions for your business</h2>
-            <p>
-              Why I say old chap that is, spiffing off his nut cor blimey
-              guvnords geeza<br />
-              bloke knees up bobby, sloshed arse William cack Richard. Bloke
-              fanny around chesed of bum bag old lost the pilot say there
-              spiffing off his nut.
-            </p>
-            <div class="light-rounded-buttons">
-              <a href="javascript:void(0)" class="btn primary-btn-outline">Get Started</a>
+      <div class="section-title-five" data-aos="fade-up"
+      data-aos-duration="1500"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="content">
+                <h6>Jadwal</h6>
+                <h2 class="fw-bold">Jadwal Pelatihan Terkini</h2>
+                <p>
+                  There are many variations of passages of Lorem Ipsum available,
+                  but the majority have suffered alteration in some form.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+        </div>
+        <!-- container -->
+      </div>
+  
+      <!-- Item 1 -->
+      <div class="schedule-item">
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-4 col-sm-12 text-center">
+            <img src="assets/images/blog/1.jpg" alt="UI Best Practices" class="schedule-image img-fluid">
+          </div>
+          <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="schedule-content">
+              <span class="category">Safety</span>
+              <h4>Ahli K3 Umum</h4>
+              <ul class="schedule-details" style="justify-content: space-between;">
+                <li><strong>Selasa 22 Oktober 2025</strong></li>
+                <li><strong>Zoom Meeting Platfrom</strong></li>
+              </ul>
+              <a href="#" class="more-icon"><i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Item 2 -->
+      <div class="schedule-item">
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-4 col-sm-12 text-center">
+            <img src="assets/images/blog/1.jpg" alt="UI Best Practices" class="schedule-image img-fluid">
+          </div>
+          <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="schedule-content">
+              <span class="category">Konstruksi</span>
+              <h4>Ahli K3 Konstruksi</h4>
+              <ul class="schedule-details" style="justify-content: space-between;">
+                <li><strong>Kamis 24 Oktober 2025</strong></li>
+                <li><strong>Zoom Meeting Platfrom</strong></li>
+              </ul>
+              <a href="#" class="more-icon"><i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Item 3 -->
+      <div class="schedule-item">
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-4 col-sm-12 text-center">
+            <img src="assets/images/blog/1.jpg" alt="UI Best Practices" class="schedule-image img-fluid">
+          </div>
+          <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="schedule-content">
+              <span class="category">Teknisi</span>
+              <h4>Ahli K3 Listrik</h4>
+              <ul class="schedule-details" style="justify-content: space-between;">
+                <li><strong>Senin 29 Oktober 2025</strong></li>
+                <li><strong>Zoom Meeting Platfrom</strong></li>
+              </ul>
+              <a href="#" class="more-icon"><i class="fa fa-angle-right"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+
+  <!-- Start Cta Area -->
+  <section id="call-action" class="call-action">
+    <div class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center">
+          <img src="./assets/images/mrs.henny-maya.png" alt="Erna Wurjanti" class="rounded-circle img-fluid">
+        </div>
+        <div class="col-md-9 mt-3">
+          <p class="fst-italic text-white">
+           " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quod error, eum quam magnam magni non? Recusandae perspiciatis facilis magnam voluptatum veniam praesentium cum, repellendus voluptatem. Adipisci consectetur voluptatem facilis, accusantium sit quod vel officiis? "
+          </p>
+          <h5 class="fw-bold mb-0 mt-3 text-white">Dr.drg Heny.D.Mayawati, MKKK</h5>
+          <small class="text-white">Kepala Pusat Higiene Perusahaan Keselamatan dan Kesehatan Kerja, Dinas Tenaga Kerja, Transmigrasi dan Energi Provinsi DKI Jakarta</small>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- End Cta Area -->
-
-
 
   <!-- Start Latest News Area -->
   <div id="article" class="latest-news-area section">
@@ -631,8 +742,8 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h6>Article</h6>
-              <h2 class="fw-bold">Latest Article</h2>
+              <h6>Artikel</h6>
+              <h2 class="fw-bold">Artikel Terbaik Kami</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, accusantium?
               </p>
@@ -726,8 +837,8 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h6>Meet our Clients</h6>
-              <h2 class="fw-bold">Our Awesome Clients</h2>
+              <h6>Klien Kami</h6>
+              <h2 class="fw-bold">Klien - Klien Terbaik Kami</h2>
               <p>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form.
@@ -769,6 +880,60 @@
   </div>
   <!-- End Brand Area -->
 
+  <div class="section-title-five">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="content">
+            <h2 class="fw-bold mt-5">Galeri Kami</h2>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </div>
+
+<div class="wrapper">
+  <!-- Filter Items -->
+  <nav>
+    <div class="items">
+      <span class="item active" data-name="all">All</span>
+      <span class="item" data-name="bag">Pelatihan 01</span>
+      <span class="item" data-name="shoe">Pelatihan 02</span>
+      <span class="item" data-name="watch">Pelatihan 03</span>
+      <span class="item" data-name="camera">Pengujian 01</span>
+      <span class="item" data-name="headphone">Pengujian 02</span>
+      <span class="item" data-name="video">Pengujian 03</span> <!-- Tambahkan kategori video -->
+    </div>
+  </nav>
+  <!-- Filter Gallery -->
+  <div class="gallery">
+    <div class="image" data-name="bag"><span><img src="assets/images/blog/1.jpg" alt=""></span></div>
+    <div class="image" data-name="headphone"><span><img src="assets/images/blog/2.jpg" alt=""></span></div>
+    <div class="image" data-name="camera"><span><img src="assets/images/blog/3.jpg" alt=""></span></div>
+    <div class="image" data-name="shoe"><span><img src="assets/images/gallery/4.png" alt=""></span></div>
+    <div class="image" data-name="headphone"><span><img src="assets/images/gallery/5.png" alt=""></span></div>
+    <div class="image" data-name="watch"><span><img src="assets/images/gallery/6.png" alt=""></span></div>
+    <div class="image" data-name="shoe"><span><img src="assets/images/gallery/7.png" alt=""></span></div>
+    <div class="image" data-name="camera"><span><img src="assets/images/gallery/8.png" alt=""></span></div>
+    <div class="image" data-name="camera"><span><img src="assets/images/gallery/9.png" alt=""></span></div>
+    <!-- Tambahkan elemen untuk video -->
+    <div class="video-item" data-name="video">
+      <div class="video-content">
+        <img src="assets/images/video-bg.png" alt="Video Thumbnail">
+        <a class="video-popup glightbox" href="https://www.youtube.com/watch?v=NJbXptdalP0">
+          <i class="lni lni-play"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- ========================= contact-section start ========================= -->
   <section id="contact" class="contact-section">
     <div class="container">
@@ -783,7 +948,7 @@
                     <i class="lni lni-phone"></i>
                   </div>
                   <div class="contact-content">
-                    <h4>Contact</h4>
+                    <h4>Kontak</h4>
                     <p>082246081826</p>
                     <p>zianwhd@gmail.com</p>
                   </div>
@@ -796,7 +961,7 @@
                     <i class="lni lni-map-marker"></i>
                   </div>
                   <div class="contact-content">
-                    <h4>Address</h4>
+                    <h4>Alamat</h4>
                     <p>East Cempaka Putih, <br> Cempaka Putih, Central Jakarta City</p>
                     <p>DKI Jakarta, Indonesia</p>
                   </div>
@@ -824,7 +989,7 @@
               <div class="col-xl-10 col-lg-8 mx-auto">
                 <div class="section-title text-center">
                   <span> Get in Touch </span>
-                  <h2>
+                  <h2 style="color: #009038;">
                     Ready to Get Started
                   </h2>
                   <p>
@@ -913,11 +1078,11 @@
               <div class="footer-widget f-link">
                 <h5>Links</h5>
                 <ul>
-                  <li><a href="#hero-area">Home</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#pricing">Inovation</a></li>
-                  <li><a href="#article">Article</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#hero-area">Beranda</a></li>
+                  <li><a href="#services">Layanan</a></li>
+                  <li><a href="#pricing">Klien</a></li>
+                  <li><a href="#article">Artikel</a></li>
+                  <li><a href="#contact">Kontak Kami</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -925,12 +1090,12 @@
             <div class="col-lg-2 col-md-6 col-12">
               <!-- Single Widget -->
               <div class="footer-widget f-link">
-                <h5>Support</h5>
+                <h5>System</h5>
                 <ul>
                   <!-- <li><a href="javascript:void(0)">Pricing</a></li> -->
-                  <li><a href="javascript:void(0)">Documentation</a></li>
-                  <li><a href="javascript:void(0)">Guides</a></li>
-                  <li><a href="javascript:void(0)">Status</a></li>
+                  <li><a href="javascript:void(0)">System 01</a></li>
+                  <li><a href="javascript:void(0)">System 02</a></li>
+                  <li><a href="javascript:void(0)">System 03</a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
